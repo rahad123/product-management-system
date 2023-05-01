@@ -32,7 +32,6 @@ const subCategoryService = {
   },
 
   slugExists: async (slug: string) => {
-    // const isSlugexists = await knex.select('*').from('sub_categories').where('slug', slug);
     const isSlugexists = await knex('sub_categories')
       .select()
       .where({ slug: slug })

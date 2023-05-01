@@ -32,7 +32,6 @@ const productCategoryService = {
   },
 
   slugExists: async (slug: string) => {
-    // const isSlugexists = await knex.select('*').from('product_categories').where('slug', slug);
     const isSlugexists = await knex('product_categories')
       .select()
       .where({ slug: slug })
