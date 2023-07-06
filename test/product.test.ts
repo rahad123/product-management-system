@@ -1,6 +1,3 @@
-import mocha from 'mocha';
-// import * as faker from 'faker';
-import { assert } from 'chai';
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 import { faker } from '@faker-js/faker';
