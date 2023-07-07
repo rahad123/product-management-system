@@ -1,11 +1,10 @@
-import { Router } from 'express';
+import { Router } from "express";
 const router = Router();
 
-import { category } from '../controllers/CategoryController';
-import { subCategory } from '../controllers/SubCategoryController';
-import { productCategory } from '../controllers/ProductCategoryController';
-import { product } from '../controllers/ProductController';
-
+import { category } from "../controllers/CategoryController";
+import { subCategory } from "../controllers/SubCategoryController";
+import { productCategory } from "../controllers/ProductCategoryController";
+import { product } from "../controllers/ProductController";
 
 // Category
 router.post("/categories", category.createCategory);
@@ -24,9 +23,18 @@ router.delete("/subCategories/:subCategory_id", subCategory.deleteSubCategory);
 // productCategory
 router.post("/productCategories", productCategory.createProductCategory);
 router.get("/productCategories", productCategory.getProductCategories);
-router.get("/productCategories/:productCategory_id", productCategory.getProductCategory);
-router.put("/productCategories/:productCategory_id", productCategory.updateProductCategory);
-router.delete("/productCategories/:productCategory_id", productCategory.deleteProductCategory);
+router.get(
+  "/productCategories/:productCategory_id",
+  productCategory.getProductCategory,
+);
+router.put(
+  "/productCategories/:productCategory_id",
+  productCategory.updateProductCategory,
+);
+router.delete(
+  "/productCategories/:productCategory_id",
+  productCategory.deleteProductCategory,
+);
 
 // product
 router.post("/products", product.createProduct);

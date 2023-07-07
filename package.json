@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/server.ts",
+    "format": "npx prettier --write .",
     "test": "mocha --require ts-node/register test/**/product.test.ts"
   },
   "author": "Shidul Ialam",
@@ -15,6 +16,7 @@
     "express": "^4.18.2",
     "knex": "^2.4.2",
     "mysql2": "^3.2.4",
+    "prettier": "^3.0.0",
     "typescript": "^5.0.4"
   },
   "devDependencies": {
